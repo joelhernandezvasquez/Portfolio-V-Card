@@ -16,6 +16,8 @@ $dots-bg:#b3b1b1;
     padding:0;
 }
 
+
+
 body{
 overflow-x: hidden;
     li{ 
@@ -166,6 +168,10 @@ overflow-x: hidden;
                      {
                          background:white;
                      }
+                     .selected-dot
+                     {
+                         background:$primary-font-color;
+                     }
                  }
                 
             }
@@ -253,8 +259,15 @@ overflow-x: hidden;
             background-position:center;
             background-repeat: no-repeat;
             filter:blur(10px);
+           
+            .overlay
+            {
+                width: 100%;
+                height: 100%;
+                background:rgba(0, 0, 0, 0.5);
+               
 
-            
+            }
         }
     }
 }
