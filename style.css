@@ -1,0 +1,278 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body li {
+  list-style-type: none;
+}
+
+body a {
+  text-decoration: none;
+  color: #96989c;
+  font-family: "Francois One", sans-serif;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+body a:hover {
+  color: #ffffff;
+  border-bottom: 3px solid #0050b0;
+}
+
+body img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+body .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 100vh;
+}
+
+body .container .developer-container {
+  background: #111112;
+}
+
+body .container .developer-container .menu-links {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 40px 0 0 70px;
+  padding: 1rem;
+}
+
+body .container .developer-container .profile {
+  width: 700px;
+  height: 600px;
+  background: #081925;
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 90px;
+}
+
+body .container .developer-container .profile h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #96989c;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+body .container .developer-container .profile h1 {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+}
+
+body .container .developer-container .profile p {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+body .container .developer-container .profile button {
+  background: #0050b0;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  outline: none;
+  border: none;
+  padding: 1rem 2.2rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+body .container .developer-container .profile * {
+  margin-bottom: 20px;
+}
+
+body .container .developer-container .slideshow-track-container {
+  width: 650px;
+  height: 500px;
+  position: absolute;
+  z-index: 4;
+  left: 730px;
+  overflow: hidden;
+}
+
+body .container .developer-container .slideshow-track-container .images-container {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+body .container .developer-container .slideshow-track-container .images-container img {
+  position: absolute;
+}
+
+body .container .developer-container .slideshow-track-container .dots-container {
+  width: 100%;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .developer-container .slideshow-track-container .dots-container .dots {
+  width: 40px;
+  height: 5px;
+  background: #b3b1b1;
+  margin-left: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.3s background;
+  transition: 0.3s background;
+}
+
+body .container .developer-container .slideshow-track-container .dots-container .dots:hover {
+  background: white;
+}
+
+body .container .developer-container .slideshow-track-container .dots-container .selected-dot {
+  background: #ffffff;
+}
+
+body .container .developer-container .aside-menu-container {
+  background: #111112;
+  width: 80px;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .developer-container .aside-menu-container .close {
+  color: #0050b0;
+  font-size: 2rem;
+  margin: 50px auto 0 auto;
+  cursor: pointer;
+}
+
+body .container .developer-container .aside-menu-container .social-media-container {
+  margin-top: 50px;
+  background: #071a26;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .developer-container .aside-menu-container .social-media-container i {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+body .container .developer-container .aside-menu-container .social-media-container a {
+  font-size: 1rem;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  padding: 20px 0;
+}
+
+body .container .developer-container .aside-menu-container .social-media-container a:hover {
+  border-bottom: none;
+}
+
+body .container .developer-container .aside-menu-container .social-media-container .vertical-line {
+  width: 40px;
+  height: 150px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border-right: 1px solid white;
+  border-right-style: dotted;
+}
+
+body .container .developer-container .aside-menu-container .social-media-container i:first-child {
+  margin-top: 50px;
+}
+
+body .container .developer-container .aside-menu-container .social-media-container i:last-child {
+  margin-top: 40px;
+}
+
+body .container .developer-container .aside-menu-container .social-media-container * {
+  margin-bottom: 30px;
+}
+
+body .container .slideshow-container {
+  background: url("images/andrew-neel-cckf4TsHAuw-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+body .container .slideshow-container .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,278 @@
+$main-bg:#111112;
+$profile-bg:#081925;
+$social-media-bg:#071a26;
+$primary-font-color:#ffffff;
+$secondary-font-color:#96989c;
+$links-hover-color:#073770;
+$btn-bg:#0050b0;
+$link-font:'Francois One', sans-serif;
+$profile-font:'Montserrat', sans-serif;
+$bold-font:'Roboto', sans-serif;
+$dots-bg:#b3b1b1;
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+
+
+body{
+overflow-x: hidden;
+    li{ 
+        list-style-type: none;
+        
+    }
+
+    a{
+        text-decoration: none;
+        color:$secondary-font-color;
+        font-family: $link-font;
+        font-size:1.1rem;
+        padding:5px;
+        
+    }
+    a:hover{
+        color:$primary-font-color;
+        border-bottom:3px solid $btn-bg;
+    }
+
+    img{
+        width:100%;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+
+    .container
+    {
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        width:100%;
+        height:100vh;
+
+        .developer-container
+        {
+            background:$main-bg;
+
+            .menu-links{
+                width:70%;
+                display:flex;
+                align-items: center;
+                justify-content: space-between;
+                margin:40px 0 0 70px;
+                padding:1rem;
+                
+                
+            }
+
+            .profile{
+                width:700px;
+                height:600px;
+                background:$profile-bg;
+                position: absolute;
+                top:150px;
+                left:100px;
+                z-index:2;
+                display:flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding-left:90px;
+
+                h2
+                {
+                    font-family: $profile-font;
+                    color:$secondary-font-color;
+                    font-size: 2.5rem;
+                    letter-spacing: 2px;
+                }
+
+                h1
+                {
+                    color:$primary-font-color;
+                    font-family: $bold-font;
+                    font-size: 3rem;
+                }
+
+                p{
+                    color:$primary-font-color;
+                    font-family: $profile-font;
+                    font-size: 1.1rem;
+                    letter-spacing: 2px;
+                }
+                button
+                {
+                    background:$btn-bg;
+                    color:$primary-font-color;
+                    font-family: $bold-font;
+                    font-size: 0.8rem;
+                    outline: none;
+                    border:none;
+                    padding:1rem 2.2rem;
+                    border-radius: 30px;
+                    text-transform: uppercase;
+                    margin-top: 20px;
+                    cursor: pointer;
+
+                }
+            }
+
+            .profile *{
+                margin-bottom:20px;
+            }
+
+             .slideshow-track-container
+            {
+                width:650px;
+                height:500px;
+                position: absolute;
+                z-index: 4;
+                left:730px;
+                overflow: hidden;
+
+                 .images-container
+                 {
+                     width:100%;
+                     height:450px;
+                     position:relative;
+                     transform:translateX(0);
+                     transition:transform 0.3s ease-out;
+                     
+                     
+                     img
+                     {
+                         position: absolute;
+                     }
+                 }
+
+                 .dots-container
+                 {
+                     width:100%;
+                     height:20px;
+                     display:flex;
+                     align-items:center;
+                     justify-content: center;
+
+                     .dots
+                     {
+                         width:40px;
+                         height:5px;
+                         background:$dots-bg;
+                         margin-left:20px;
+                         cursor: pointer;
+                         transition:0.3s background;
+                     }
+                     .dots:hover
+                     {
+                         background:white;
+                     }
+                     .selected-dot
+                     {
+                         background:$primary-font-color;
+                     }
+                 }
+                
+            }
+            
+            .aside-menu-container
+            {
+                background:$main-bg;
+                width:80px;
+                height:100vh;
+                position: absolute;
+                top:0px;
+                right:5px;
+                z-index: 3;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+
+                .close{
+                    color:$btn-bg;
+                    font-size: 2rem;
+                    margin:50px auto 0 auto;
+                    cursor: pointer;
+
+                }
+
+                .social-media-container
+                {
+                    margin-top:50px;
+                    background:$social-media-bg;
+                    height:100%;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    i
+                    {
+                        color:$primary-font-color;
+                        font-size: 2rem;
+                        
+                    }
+
+                    a
+                    {
+                        font-size: 1rem;
+                        transform:rotate(270deg);
+                        padding:20px 0;
+                        
+                    }
+                    a:hover
+                    {
+                        border-bottom: none;
+                    }
+
+                    .vertical-line
+                    {
+                        width:40px;
+                        height:150px;
+                        align-self: flex-start;
+                        border-right: 1px solid white;
+                        border-right-style: dotted;
+                      
+                    }
+
+                }
+
+                .social-media-container i:first-child
+                {
+                    margin-top:50px;
+                }
+                .social-media-container i:last-child
+                {
+                    margin-top:40px;
+                }
+                .social-media-container *
+                {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        .slideshow-container
+        {
+            background:url("images/andrew-neel-cckf4TsHAuw-unsplash.jpg");
+            background-size: cover;
+            background-position:center;
+            background-repeat: no-repeat;
+            filter:blur(10px);
+           
+            .overlay
+            {
+                width: 100%;
+                height: 100%;
+                background:rgba(0, 0, 0, 0.5);
+               
+
+            }
+        }
+    }
+}
+
+
+
+
+
